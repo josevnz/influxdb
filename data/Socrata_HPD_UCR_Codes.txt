@@ -1,0 +1,944 @@
+ucr_code,primary_description,secondary_description
+0100,homicide,homicide-crim
+0101,homicide,murder-handgun
+0102,homicide,murder-shotgun
+0103,homicide,murder-rifle
+0104,homicide,murder-knife
+0105,homicide,murder-other
+0108,homicide,manslaughter 1
+0109,homicide,manslaughter 2
+0200,sexual assault,rape
+0201,sexual assault,sex asslt 1
+0202,sexual assault,sex asslt 1gun
+0211,sexual assault,sex asslt 1 attempt
+0212,sexual assault,sex asslt 1 gun attempt
+0300,robbery,robbery
+0301,robbery,robbery-gun *street*
+0302,robbery,robbery-knife *street*
+0303,robbery,robbery-weapon*street*
+0304,robbery,robbery-hands *street*
+0311,robbery,robbery-gun *commer*
+0312,robbery,robbery-knife *commer*
+0313,robbery,robbery-weapon*commer*
+0314,robbery,robbery-hands *commer*
+0321,robbery,robbery-gun *gas st*
+0322,robbery,robbery-knife *gas st*
+0323,robbery,robbery-weapon*gas st*
+0324,robbery,robbery-hands *gas st*
+0331,robbery,robbery-gun *taxi*
+0332,robbery,robbery-knife *taxi*
+0333,robbery,robbery-weapon*taxi*
+0334,robbery,robbery-hands *taxi*
+0341,robbery,robbery-gun *resid*
+0342,robbery,robbery-knife *resid*
+0343,robbery,robbery-weapon*resid*
+0344,robbery,robbery-hands *resid*
+0345,robbery,robbery-invas *resid*
+0351,robbery,robbery-gun *bank*
+0352,robbery,robbery-knife *bank*
+0353,robbery,robbery-weapon*bank*
+0354,robbery,robbery-hands *bank*
+0361,robbery,robbery-gun *all other
+0362,robbery,robbery-knife*all other
+0363,robbery,robbery-weapon*all othe
+0364,robbery,robbery-hands*all other
+0400,aggravated assault,asslts -felony
+0401,aggravated assault,asslt-1-gun
+0402,aggravated assault,asslt-1-knife
+0403,aggravated assault,asslt-1-weapon
+0404,aggravated assault,asslt-1-hands
+0411,aggravated assault,asslt-2-gun
+0412,aggravated assault,asslt-2-knife
+0413,aggravated assault,asslt-2-weapon
+0414,aggravated assault,asslt-2-hands
+0415,aggravated assault,asslt-2-weapon threat
+0421,aggravated assault,asslt-po-gun
+0422,aggravated assault,asslt-po-knife
+0423,aggravated assault,asslt-po-weapon
+0424,aggravated assault,asslt-po-hands
+0425,aggravated assault,asslt-3rd-po
+0431,aggravated assault,asslt-emt-gun
+0432,aggravated assault,asslt-emt-knife
+0433,aggravated assault,asslt-emt-weapon
+0434,aggravated assault,asslt-emt-hands
+0435,aggravated assault,asslt-3rd-emt
+0444,aggravated assault,asslt-1-admin
+0500,burglary,burglary
+0501,burglary,burg1-res-nite
+0502,burglary,burg1-res-day
+0503,burglary,burg1-com-nite
+0504,burglary,burg1-com-day
+0511,burglary,burg2-res-nite
+0512,burglary,burg2-nite-att-res
+0521,burglary,burg3-res-day
+0522,burglary,burg3-com-nite
+0523,burglary,burg3-com-day
+0524,burglary,burg3-day-att-res
+0525,burglary,burg3-nite-att-comm
+0526,burglary,burg3-day-att-comm
+0600,larceny,larceny part 1
+0601,larceny,larc1-person-over-2000
+0602,larceny,larc2-person-$501-2000
+0603,larceny,larc3-person $251-500
+0604,larceny,larc3-person $51-250
+0605,larceny,larc4-person $0-50
+0611,larceny,larc1-purse
+0612,larceny,larc2-purse
+0613,larceny,larc3-purse
+0614,larceny,larc3-purse
+0615,larceny,larc4-purse
+0621,larceny,larc1 shoplift
+0622,larceny,larc2 shoplift
+0623,larceny,larc3 shoplift
+0624,larceny,larc3 shoplift
+0625,larceny,larc4 shoplift
+0631,larceny,larc1-from m/v
+0632,larceny,larc2-from m/v
+0633,larceny,larc3-from m/v
+0634,larceny,larc3-from m/v
+0635,larceny,larc4-from m/v
+0641,larceny,larc1-m/v part
+0642,larceny,larc2-m/v part
+0643,larceny,larc3-m/v part
+0644,larceny,larc3m/v part
+0645,larceny,larc4-m/v part-sto-plate
+0651,larceny,larc1-bicycle
+0652,larceny,larc2-bicycle
+0653,larceny,larc3-bicycle
+0654,larceny,larc3-bicycle
+0655,larceny,larc4-bicycle
+0661,larceny,larc1-building
+0662,larceny,larc2-building
+0663,larceny,larc3-building
+0664,larceny,larc3-building
+0665,larceny,larc4-building
+0671,larceny,larc1-machine
+0672,larceny,larc2-machine
+0673,larceny,larc3-machine
+0674,larceny,larc3-machine
+0675,larceny,larc4-machine
+0681,larceny,larc1-miscell
+0682,larceny,larc2-miscell
+0683,larceny,larc3-miscell
+0684,larceny,larc3-miscell
+0685,larceny,larc4-miscell
+0700,motor vehicle theft,auto theft
+0701,motor vehicle theft,m/v-theft-auto
+0702,motor vehicle theft,m/v-theft-bus/truck
+0703,motor vehicle theft,m/v-theft-misc/mc
+0711,motor vehicle theft,auto-theft-rec
+0712,motor vehicle theft,bus theft-rec
+0713,motor vehicle theft,auto theft-rec
+0721,motor vehicle theft,m/v theft-rec-o
+0722,motor vehicle theft,m/v theft-rec-o
+0723,motor vehicle theft,m/v theft-rec-o
+0730,motor vehicle theft,att auto theft
+0761,motor vehicle theft,tamp with m/v
+0762,motor vehicle theft,conversion m/v
+0763,motor vehicle theft,alteration vin
+0764,motor vehicle theft,use mv wo perm
+0800,simple assault,simple assault
+0801,simple assault,assault 3
+0802,simple assault,threatening
+0803,simple assault,reckless end 1
+0804,simple assault,reckless end 2
+0805,simple assault,intfering w po
+0809,simple assault,failure to assist po
+0900,forgery/counterfeiting,forgery
+0901,forgery/counterfeiting,forgery 1
+0902,forgery/counterfeiting,forgery 2
+0903,forgery/counterfeiting,forgery 3
+0904,forgery/counterfeiting,cr-simulation/cntrfeit
+0905,forgery/counterfeiting,forgery-symbol
+0906,forgery/counterfeiting,use of slugs 1
+0907,forgery/counterfeiting,use of slugs 2
+0908,forgery/counterfeiting,forgery-other
+0909,forgery/counterfeiting,forgery-att
+0910,forgery/counterfeiting,money laundering
+0911,forgery/counterfeiting,computer crime 1
+0912,forgery/counterfeiting,computer crime 2
+0913,forgery/counterfeiting,computer crime 3
+0914,forgery/counterfeiting,computer crimes other
+1000,fraud/embezzlement/extortion,fraud/embezzle
+1001,fraud/embezzlement/extortion,larc1-embezzle
+1002,fraud/embezzlement/extortion,larc1-o-g-f-p
+1003,fraud/embezzlement/extortion,larc1-extort
+1004,fraud/embezzlement/extortion,larc1-fare ev
+1005,fraud/embezzlement/extortion,larc1-creditcd
+1006,fraud/embezzlement/extortion,larc1-flimflam
+1007,fraud/embezzlement/extortion,larc1-others
+1008,fraud/embezzlement/extortion,larc1-attempts
+1009,fraud/embezzlement/extortion,larc1-welfare
+1011,fraud/embezzlement/extortion,larc2-embezzle
+1012,fraud/embezzlement/extortion,larc2-o-g-f-p
+1013,fraud/embezzlement/extortion,larc2-extort
+1014,fraud/embezzlement/extortion,larc2-fare ev
+1015,fraud/embezzlement/extortion,larc2-credited
+1016,fraud/embezzlement/extortion,larc2-flimflam
+1017,fraud/embezzlement/extortion,larc2-others
+1018,fraud/embezzlement/extortion,larc2attempts
+1019,fraud/embezzlement/extortion,larc2-welfare
+1021,fraud/embezzlement/extortion,larc3-embezzle
+1022,fraud/embezzlement/extortion,larc3-o-g-f-p
+1023,fraud/embezzlement/extortion,larc3-extort
+1024,fraud/embezzlement/extortion,larc3-fare ev
+1025,fraud/embezzlement/extortion,larc3-credit
+1026,fraud/embezzlement/extortion,larc3-flimflam
+1027,fraud/embezzlement/extortion,larc3-others
+1028,fraud/embezzlement/extortion,larc3-attempts
+1029,fraud/embezzlement/extortion,larc3-welfar
+1031,fraud/embezzlement/extortion,larc4-embezzle
+1032,fraud/embezzlement/extortion,larc4-o-g-f-p
+1033,fraud/embezzlement/extortion,larc4-extort
+1034,fraud/embezzlement/extortion,larc4-fare ev
+1035,fraud/embezzlement/extortion,larc4-credit
+1036,fraud/embezzlement/extortion,larc4-flimflam
+1037,fraud/embezzlement/extortion,larc4-others/checks
+1038,fraud/embezzlement/extortion,larc4-attempts
+1039,fraud/embezzlement/extortion,larc4-welfare
+1040,fraud/embezzlement/extortion,misap property/concealmnt
+1045,fraud/embezzlement/extortion,larc-gasoline
+1050,fraud/embezzlement/extortion,iss bad checks
+1060,fraud/embezzlement/extortion,cr imperson
+1100,stolen property,larc-receiving
+1101,stolen property,larc1-receiver
+1102,stolen property,larc2-receiver
+1103,stolen property,larc3-receiver
+1104,stolen property,larc4-rec-poss-sto-pl/arr
+1200,weapons offenses,dang weapons
+1201,weapons offenses,carry weapon
+1202,weapons offenses,carry pistol
+1203,weapons offenses,weapons-sale
+1204,weapons offenses,weapon in m/v
+1205,weapons offenses,discharge gun
+1206,weapons offenses,weapon in m/v
+1207,weapons offenses,weapons-misc
+1208,weapons offenses,weapons-att
+1209,weapons offenses,poss firearm in/on sch prpy
+1210,weapons offenses,ill poss of assault weap
+1211,weapons offenses,gun buyback
+1300,prostitution,prostitution
+1301,prostitution,prostitution
+1302,prostitution,prost-patron
+1303,prostitution,prost-promo-1
+1304,prostitution,prost-promo-2
+1305,prostitution,prost-promo-3
+1306,prostitution,prost-house
+1307,prostitution,prost-other
+1308,prostitution,prost-attempt
+1309,prostitution,prost-veh
+1400,sex offenses,sex-offenses
+1401,sex offenses,sex-asslt 2
+1402,sex offenses,sex-asslt 3
+1403,sex offenses,sex-asslt 4
+1404,sex offenses,sex-asslt 3gun
+1409,sex offenses,adultery
+1410,sex offenses,incest
+1411,sex offenses,pub-indecency
+1415,sex offenses,sex-off-other
+1500,family offenses,off vs family
+1501,family offenses,desertion
+1502,family offenses,abandon-family
+1503,family offenses,non-support
+1504,family offenses,neglect family
+1505,family offenses,abuse family
+1506,family offenses,cust interfer1
+1507,family offenses,cust interfer2
+1508,family offenses,sub of chrildrn
+1509,family offenses,cruelty person
+1510,family offenses,family-others
+1511,family offenses,attempt-family
+1512,family offenses,risk of injury
+1513,family offenses,bigamy
+1514,family offenses,child abuse
+1600,drug offenses,narcotic laws
+1601,drug offenses,possess-heroin
+1602,drug offenses,possess-marij
+1603,drug offenses,possess-cocaine
+1604,drug offenses,possess-drugs
+1605,drug offenses,c-t-v-s-n-l / rev-sting
+1606,drug offenses,possess-hashish
+1607,drug offenses,possession - crack
+1608,drug offenses,possession - synthetic drug
+1611,drug offenses,sale-heroin
+1612,drug offenses,sale-marijuana
+1613,drug offenses,sale-cocaine
+1614,drug offenses,sale-drugs
+1615,drug offenses,narco-other-para
+1616,drug offenses,sale-hashish
+1617,drug offenses,p-w-i-t-s heroin
+1618,drug offenses,p-w-i-t-s marjna
+1619,drug offenses,p-w-i-t-s cocane
+1620,drug offenses,p-w-i-t-s drugse
+1621,drug offenses,drugs-fraud/mirep-rx
+1627,drug offenses,sale of crack
+1628,drug offenses,sale-synthetic drug
+1637,drug offenses,p-w-i-t-s crack
+1638,drug offenses,p-w-i-t-s synthetic drug
+1639,drug offenses,p-untax marij,heroin,coke
+1640,drug offenses,p-untax mari2oz>,7gms>her,c
+1700,liquor laws,liquor laws
+1701,liquor laws,liquor-sale to minor
+1702,liquor laws,liquor-sale(bootleg)
+1703,liquor laws,liquor-days&hours
+1704,liquor laws,liquor-misc
+1705,liquor laws,liquor-attempt
+1706,liquor laws,liquor-permit violation
+1800,public drunkenness,intoxication
+1801,public drunkenness,intoxication
+1810,public drunkenness,public drinking
+1900,crimes against the public,breach-peace
+1901,crimes against the public,breach-peace
+1902,crimes against the public,dis-conduct
+1903,crimes against the public,harrassment
+1904,crimes against the public,domestic
+1905,crimes against the public,creating public disturbance
+1906,crimes against the public,loitering-sg
+1907,crimes against the public,bomb threat
+1908,crimes against the public,juvenile misc
+1909,crimes against the public,simple tresspass
+1910,crimes against the public,spousal abuse
+1911,crimes against the public,stalking
+1912,crimes against the public,obstucting free passage
+1920,crimes against the public,panhandling
+1921,crimes against the public,public disturbance
+1922,crimes against the public,loitering
+1923,crimes against the public,excessive noise
+1924,crimes against the public,comm court
+2000,radio signal,radio signal
+2001,radio signal,radio signal
+2002,radio signal,radio signal
+2003,radio signal,radio signal
+2004,radio signal,radio signal
+2005,radio signal,radio signal
+2006,radio signal,radio signal
+2007,radio signal,radio signal
+2008,radio signal,radio signal
+2009,radio signal,radio signal
+2010,radio signal,radio signal
+2011,radio signal,radio signal
+2012,radio signal,radio signal
+2013,radio signal,radio signal
+2014,radio signal,radio signal
+2015,radio signal,radio signal
+2016,radio signal,radio signal
+2017,radio signal,radio signal
+2018,radio signal,radio signal
+2019,radio signal,radio signal
+2020,radio signal,radio signal
+2021,radio signal,radio signal
+2022,radio signal,radio signal
+2023,radio signal,radio signal
+2024,radio signal,radio signal
+2025,radio signal,radio signal
+2026,radio signal,radio signal
+2027,radio signal,radio signal
+2028,radio signal,radio signal
+2029,radio signal,radio signal
+2030,radio signal,radio signal
+2031,radio signal,radio signal
+2032,radio signal,radio signal
+2033,radio signal,radio signal
+2034,radio signal,radio signal
+2035,radio signal,radio signal
+2036,radio signal,radio signal
+2037,radio signal,radio signal
+2038,radio signal,radio signal
+2039,radio signal,radio signal
+2040,radio signal,radio signal
+2041,radio signal,radio signal
+2042,radio signal,radio signal
+2043,radio signal,radio signal
+2044,radio signal,radio signal
+2045,radio signal,radio signal
+2046,radio signal,radio signal
+2047,radio signal,radio signal
+2048,radio signal,radio signal
+2049,radio signal,radio signal
+2050,radio signal,radio signal
+2051,radio signal,radio signal
+2052,radio signal,radio signal
+2053,radio signal,radio signal
+2054,radio signal,radio signal
+2055,radio signal,radio signal
+2056,radio signal,radio signal
+2057,radio signal,radio signal
+2058,radio signal,radio signal
+2059,radio signal,radio signal
+2060,radio signal,radio signal
+2061,radio signal,radio signal
+2062,radio signal,radio signal
+2063,radio signal,radio signal
+2064,radio signal,radio signal
+2065,radio signal,radio signal
+2066,radio signal,radio signal
+2067,radio signal,radio signal
+2068,radio signal,radio signal
+2069,radio signal,radio signal
+2070,radio signal,radio signal
+2071,radio signal,radio signal
+2072,radio signal,radio signal
+2073,radio signal,radio signal
+2074,radio signal,radio signal
+2075,radio signal,radio signal
+2076,radio signal,radio signal
+2077,radio signal,radio signal
+2078,radio signal,radio signal
+2079,radio signal,radio signal
+2080,radio signal,radio signal
+2081,radio signal,radio signal
+2082,radio signal,radio signal
+2083,radio signal,radio signal
+2084,radio signal,radio signal
+2085,radio signal,radio signal
+2086,radio signal,radio signal
+2087,radio signal,radio signal
+2088,radio signal,radio signal
+2089,radio signal,radio signal
+2090,radio signal,radio signal
+2091,radio signal,radio signal
+2092,radio signal,radio signal
+2093,radio signal,radio signal
+2094,radio signal,radio signal
+2095,radio signal,radio signal
+2096,radio signal,radio signal
+2097,radio signal,radio signal
+2098,radio signal,radio signal
+2099,radio signal,radio signal
+2100,gambling,gambling
+2101,gambling,gambling-pro
+2102,gambling,bookmaking
+2103,gambling,policy law
+2104,gambling,gamble-device
+2105,gambling,gamble-device
+2106,gambling,gamble-house
+2107,gambling,gamble-house
+2108,gambling,horse-betting
+2109,gambling,gambling-other
+2200,drunk driving,drunk driving
+2201,drunk driving,drunk driving
+2202,drunk driving,d-w-i- attempt
+2300,driving laws,driving laws
+2301,driving laws,improper brakes
+2306,driving laws,fgrw fire veh
+2307,driving laws,fgrw police
+2308,driving laws,fgrw pedestrian
+2309,driving laws,ft hand signal
+2310,driving laws,ft slow down
+2311,driving laws,ft sig direction
+2313,driving laws,improper lights
+2314,driving laws,leaving m/v-door open/acc
+2315,driving laws,mech signal
+2316,driving laws,blinking light
+2317,driving laws,no left turn
+2320,driving laws,impeding traffic
+2321,driving laws,oneway street
+2322,driving laws,blocking hydrant
+2323,driving laws,overcrowding
+2324,driving laws,passing bus
+2325,driving laws,racing
+2326,driving laws,reckless driving
+2327,driving laws,traveling too fast
+2328,driving laws,speeding
+2329,driving laws,stop sign
+2330,driving laws,unlicensed person
+2331,driving laws,parking violation
+2332,driving laws,ft obey off signal
+2333,driving laws,ft drive prop lane
+2334,driving laws,foll too close
+2335,driving laws,vio left turn
+2336,driving laws,ftgrw/driveway
+2340,driving laws,improper backing
+2341,driving laws,improper turn
+2342,driving laws,overtaking
+2343,driving laws,improp starting
+2344,driving laws,imprp lane change
+2350,driving laws,hazardous traffic violation
+2351,driving laws,other traffic violation
+2400,motor vehicle laws,m/v laws
+2401,motor vehicle laws,evading resp
+2403,motor vehicle laws,ft carry lic
+2404,motor vehicle laws,failure tc registration
+2409,motor vehicle laws,loan license
+2410,motor vehicle laws,op mv wo lic
+2411,motor vehicle laws,op under susp
+2414,motor vehicle laws,op unreg m/v
+2417,motor vehicle laws,ft carry insurance
+2418,motor vehicle laws,misuse of plates
+2419,motor vehicle laws,other m/v laws
+2420,motor vehicle laws,pedestrian laws
+2422,motor vehicle laws,unnecessary noise
+2423,motor vehicle laws,motorcycle violation
+2424,motor vehicle laws,ft show license
+2425,motor vehicle laws,ft to drive to right
+2426,motor vehicle laws,passing on right
+2427,motor vehicle laws,reck use by ped
+2430,motor vehicle laws,towed vehicle
+2500,city ordinances,ordinances
+2501,city ordinances,housing code vio
+2502,city ordinances,ft supply heat
+2503,city ordinances,ft remove snow
+2504,city ordinances,condemned property
+2505,city ordinances,vio park laws
+2506,city ordinances,peddling
+2507,city ordinances,pond/obscenity laws
+2508,city ordinances,vio food law
+2509,city ordinances,vio blue law
+2510,city ordinances,vio labor law
+2511,city ordinances,vio fish/game law
+2512,city ordinances,vio junk; law
+2513,city ordinances,inciting riot
+2514,city ordinances,riot one
+2515,city ordinances,riot two
+2516,city ordinances,false report
+2517,city ordinances,city ordinance
+2518,city ordinances,misc state law
+2519,city ordinances,vio curfew
+2520,city ordinances,fortune telling
+2530,city ordinances,ill sales w/o permit
+2540,city ordinances,scalping tickts
+2550,city ordinances,ft pay wages
+2560,city ordinances,ft file tax return
+2570,city ordinances,mittimus
+2580,city ordinances,subpoena
+2590,city ordinances,capias
+2600,judicial offenses,judicial off
+2601,judicial offenses,bribery-giving
+2602,judicial offenses,bribr-receive
+2603,judicial offenses,vio probation
+2604,judicial offenses,residivist-juv
+2605,judicial offenses,capias
+2606,judicial offenses,contempt court/prot-ord
+2607,judicial offenses,ft appear 1
+2608,judicial offenses,ft appear 2
+2609,judicial offenses,hind prosec 1
+2610,judicial offenses,hind prosec 2
+2611,judicial offenses,perjury
+2612,judicial offenses,tampw/ evid
+2613,judicial offenses,tampw/ juror
+2614,judicial offenses,fugitive
+2615,judicial offenses,escape 1
+2616,judicial offenses,escape 2
+2617,judicial offenses,tamp w/witness
+2618,judicial offenses,conveying articles-jail
+2620,judicial offenses,re-imprisonment
+2625,judicial offenses,mittimus
+2626,judicial offenses,gps - protective order
+2630,judicial offenses,false entry - public record
+2635,judicial offenses,false statement
+2650,judicial offenses,conspiracy -felony
+2655,judicial offenses,cora,-felony
+2656,judicial offenses,cora,-misdemeanor
+2660,judicial offenses,conspiracy -misd
+2665,judicial offenses,aiding & abetting criminal
+2670,judicial offenses,criminal att-felony
+2680,judicial offenses,criminal att-misdem
+2681,judicial offenses,criminal negligence
+2685,judicial offenses,refusal to be fingerprinted
+2690,judicial offenses,criminal advocacy
+2691,judicial offenses,coercion
+2692,judicial offenses,rigging
+2693,judicial offenses,scalping
+2694,judicial offenses,hate crimes - race
+2695,judicial offenses,hate crimes - religion
+2696,judicial offenses,hate crime - ethnic
+2697,judicial offenses,hate crimes - sex orient
+2700,investigations,investigation
+2701,investigations,inv homicide
+2702,investigations,inv rape
+2703,investigations,inv robbery
+2704,investigations,inv assault1-2
+2705,investigations,inv burglary
+2706,investigations,inv larceny
+2707,investigations,inv auto theft
+2708,investigations,inv assault 3
+2709,investigations,inv forgery
+2710,investigations,inv fraud
+2711,investigations,inv receiver
+2712,investigations,inv weapons
+2713,investigations,inv prostitute
+2714,investigations,inv sex off
+2715,investigations,inv child abuse
+2716,investigations,inv narcotics
+2717,investigations,inv liquor law
+2718,investigations,susp person
+2719,investigations,susp auto
+2721,investigations,inv gambling
+2722,investigations,inv fire
+2725,investigations,"metro"follow-up
+2800,missing person/property,missing
+2801,missing person/property,missing pers
+2810,missing person/property,a.w.o.l.-group homes
+2815,missing person/property,a.w.o.l-institution
+2850,missing person/property,missing prop
+2860,missing person/property,lost/stolen prop
+2900,found person/property,found per-prop
+2901,found person/property,found person
+2902,found person/property,found property
+2903,found person/property,abandoned m/v
+2905,found person/property,m-v-s-o-t-r-l
+3000,fatal accident,fatal accident
+3010,fatal accident,fatal accident
+3011,fatal accident,fatal accident
+3012,fatal accident,fatal accident
+3013,fatal accident,fatal accident
+3014,fatal accident,fatal accident
+3020,fatal accident,fatal accident
+3021,fatal accident,fatal accident
+3022,fatal accident,fatal accident
+3023,fatal accident,fatal accident
+3024,fatal accident,vehicular manslaughter 2nd
+3030,fatal accident,fatal accident
+3031,fatal accident,ftaal accident
+3032,fatal accident,fatal accident
+3033,fatal accident,fatal accident
+3040,fatal accident,fatal accident
+3041,fatal accident,fatal accident
+3042,fatal accident,fatal accident
+3043,fatal accident,fatal accident
+3044,fatal accident,fatal accident
+3050,fatal accident,fatal accident
+3051,fatal accident,fatal accident
+3052,fatal accident,fatal accident
+3053,fatal accident,fatal accident
+3054,fatal accident,fatal accident
+3060,fatal accident,fatal accident
+3061,fatal accident,fatal accident
+3062,fatal accident,fatal accident
+3063,fatal accident,fatal accident
+3064,fatal accident,fatal accident
+3070,fatal accident,fatal accident
+3071,fatal accident,fatal accident
+3072,fatal accident,fatal accident
+3073,fatal accident,fatal accident
+3074,fatal accident,fatal accident
+3080,fatal accident,fatal accident
+3081,fatal accident,fatal accident
+3082,fatal accident,fatal accident
+3083,fatal accident,fatal accident
+3084,fatal accident,fatal accident
+3090,fatal accident,fatal accident
+3091,fatal accident,fatal accident
+3092,fatal accident,fatal accident
+3093,fatal accident,fatal accident
+3094,fatal accident,fatal accident
+3100,personal injury accident,pers inj acc
+3110,personal injury accident,pers inj acc
+3111,personal injury accident,per inj acc
+3112,personal injury accident,per inj acc
+3113,personal injury accident,pers inj acc
+3114,personal injury accident,pers inj acc
+3120,personal injury accident,pers inj acc
+3121,personal injury accident,pers inj acc
+3122,personal injury accident,pers inj acc
+3123,personal injury accident,pers inj acc
+3124,personal injury accident,pers inj acc
+3130,personal injury accident,pers inj acc
+3131,personal injury accident,pers inj acc
+3132,personal injury accident,pers inj acc
+3133,personal injury accident,pers inj acc
+3134,personal injury accident,pers inj acc
+3140,personal injury accident,pers inj acc
+3141,personal injury accident,pers inj acc
+3142,personal injury accident,pers inj acc
+3143,personal injury accident,pers inj acc
+3144,personal injury accident,pers inj acc
+3150,personal injury accident,pers inj acc
+3151,personal injury accident,pers inj acc
+3152,personal injury accident,pers inj acc
+3153,personal injury accident,pers inj acc
+3154,personal injury accident,pers inj acc
+3160,personal injury accident,pers inj acc
+3161,personal injury accident,pers inj acc
+3162,personal injury accident,pers inj acc
+3163,personal injury accident,pers inj acc
+3164,personal injury accident,pers inj acc
+3170,personal injury accident,pers inj acc
+3171,personal injury accident,pers inj acc
+3172,personal injury accident,pers inj acc
+3173,personal injury accident,pers inj acc
+3174,personal injury accident,pers inj acc
+3180,personal injury accident,pers inj acc
+3181,personal injury accident,pers inj acc
+3182,personal injury accident,pers inj acc
+3183,personal injury accident,pers inj acc
+3184,personal injury accident,pers inj acc
+3190,personal injury accident,pers inj acc
+3191,personal injury accident,pers inj acc
+3192,personal injury accident,pers inj acc
+3193,personal injury accident,pers inj acc
+3194,personal injury accident,pers inj acc
+3200,property damage accident,prop dam acc
+3210,property damage accident,prop dam acc
+3211,property damage accident,prop dam acc
+3212,property damage accident,prop dam acc
+3213,property damage accident,prop dam acc
+3214,property damage accident,prop dam acc
+3220,property damage accident,prop dam acc
+3221,property damage accident,prop dam acc
+3222,property damage accident,prop dam acc
+3223,property damage accident,prop dam acc
+3224,property damage accident,prop dam acc
+3230,property damage accident,prop dam acc
+3231,property damage accident,prop dam acc
+3232,property damage accident,prop dam acc
+3233,property damage accident,prop dam acc
+3234,property damage accident,prop dam acc
+3240,property damage accident,prop dam acc
+3241,property damage accident,prop dam acc
+3242,property damage accident,prop dam acc
+3243,property damage accident,prop dam acc
+3244,property damage accident,prop dam acc
+3250,property damage accident,prop dam acc
+3251,property damage accident,prop dam acc / dog struck
+3252,property damage accident,prop dam acc
+3253,property damage accident,prop dam acc
+3254,property damage accident,prop dam acc
+3260,property damage accident,prop dam acc
+3261,property damage accident,prop dam acc
+3262,property damage accident,prop dam acc
+3263,property damage accident,prop dam acc
+3264,property damage accident,prop dam acc
+3270,property damage accident,prop dam acc
+3271,property damage accident,prop dam acc
+3272,property damage accident,prop dam acc
+3273,property damage accident,prop dam acc
+3274,property damage accident,prop dam acc
+3280,property damage accident,prop dam acc
+3281,property damage accident,prop dam acc
+3282,property damage accident,prop dam acc
+3283,property damage accident,prop dam acc
+3284,property damage accident,prop dam acc
+3290,property damage accident,prop dam acc
+3291,property damage accident,prop dam acc
+3292,property damage accident,prop dam acc
+3293,property damage accident,prop dam acc
+3294,property damage accident,prop dam acc
+3300,non-involved accident,non-inv acc
+3310,non-involved accident,non-inv acc
+3311,non-involved accident,non-inv acc
+3312,non-involved accident,non-inv acc
+3313,non-involved accident,non-inv acc
+3314,non-involved accident,non-inv acc
+3320,non-involved accident,non-inv acc
+3321,non-involved accident,non-inv acc / settled
+3322,non-involved accident,non-inv acc
+3323,non-involved accident,non-inv acc
+3324,non-involved accident,non-inv acc
+3330,non-involved accident,non-inv acc
+3331,non-involved accident,non-inv acc
+3332,non-involved accident,non-inv acc
+3333,non-involved accident,non-inv acc
+3334,non-involved accident,non-inv acc
+3340,non-involved accident,non-inv acc
+3341,non-involved accident,non-inv acc
+3342,non-involved accident,non-inv acc
+3343,non-involved accident,non-inv acc
+3344,non-involved accident,non-inv acc
+3350,non-involved accident,non-inv acc
+3351,non-involved accident,non-inv acc
+3352,non-involved accident,non-inv acc
+3353,non-involved accident,non-inv acc
+3354,non-involved accident,non-inv acc
+3360,non-involved accident,non-inv acc
+3361,non-involved accident,non-inv acc
+3362,non-involved accident,non-inv acc
+3363,non-involved accident,non-inv acc
+3364,non-involved accident,non-inv acc
+3370,non-involved accident,non-inv acc
+3371,non-involved accident,non-inv acc
+3372,non-involved accident,non-inv acc
+3373,non-involved accident,non-inv acc
+3374,non-involved accident,non-inv acc
+3380,non-involved accident,non-inv acc
+3381,non-involved accident,non-inv acc
+3382,non-involved accident,non-inv acc
+3383,non-involved accident,non-inv acc
+3384,non-involved accident,non-inv acc
+3390,non-involved accident,non-inv acc
+3391,non-involved accident,non-inv acc
+3392,non-involved accident,non-inv acc
+3393,non-involved accident,non-inv acc
+3394,non-involved accident,non-inv acc
+3400,other accident,other accident
+3401,other accident,drowning-city
+3402,other accident,falls-city
+3403,other accident,burns-city
+3404,other accident,explosive-city
+3405,other accident,poison-city
+3406,other accident,gas-city
+3407,other accident,city acc other
+3411,other accident,drowning-priv
+3412,other accident,falls-private
+3413,other accident,burns-private
+3414,other accident,explosive-priv
+3415,other accident,poison-private
+3416,other accident,gas-private
+3417,other accident,private-acc
+3420,other accident,occupation-acc
+3430,other accident,firearms-acc
+3440,other accident,occ-inj-police
+3450,other accident,pd/veh/accident
+3451,other accident,pd/veh/acc/oi*occ-inj*
+3452,other accident,pd/veh/acc/ci*cit-inj*
+3453,other accident,pd/veh/acc/mi*mult-inj*
+3460,other accident,boating related incident
+3470,other accident,pd boating incident
+3480,other accident,police m/v chase
+3481,other accident,chase/pd/acc
+3482,other accident,chase/acc/other
+3483,other accident,chase/acc/multi
+3490,other accident,hazardous condition
+3491,other accident,harmfull sub / epa
+3500,misc. crimes against property,misc c-a-prop
+3501,misc. crimes against property,cr mischief 1
+3502,misc. crimes against property,cr mischief 2
+3503,misc. crimes against property,cr mischief 3
+3504,misc. crimes against property,cr trespass 1
+3505,misc. crimes against property,cr trespass 2
+3506,misc. crimes against property,cr trespass 3
+3507,misc. crimes against property,damage pd equ
+3508,misc. crimes against property,poss-burg-tool
+3509,misc. crimes against property,littering-hwy
+3510,misc. crimes against property,tamp-w-commun
+3511,misc. crimes against property,criminal lockout
+3517,misc. crimes against property,disabled pd vehicle
+3520,misc. crimes against property,public propty vandalism
+3521,misc. crimes against property,harmful subst streets
+3522,misc. crimes against property,disabled priv vehicle
+3550,misc. crimes against property,pawned property
+3600,federal offenses,federal laws
+3601,federal offenses,civil rights
+3602,federal offenses,discrimination
+3603,federal offenses,federal case
+3604,federal offenses,imigration law
+3700,fire-related,fire related
+3701,fire-related,arson 1
+3702,fire-related,arson 2
+3703,fire-related,arson 3
+3704,fire-related,fireworks-dis
+3705,fire-related,firebombing
+3706,fire-related,poss-explosive
+3707,fire-related,false alarm
+3708,fire-related,reck burning
+3709,fire-related,fire-juvenile
+3710,fire-related,fatal fire
+3711,fire-related,fire-res-own/locc
+3712,fire-related,fire-res-own-occ*i
+3713,fire-related,fire-other in apt
+3714,fire-related,fire-res-other*i in apt
+3715,fire-related,fire-storage fac
+3716,fire-related,fire-storage fac*i
+3717,fire-related,fire-indust/mnfg
+3718,fire-related,fire-indust/mnfg*i
+3719,fire-related,fire-commercial
+3720,fire-related,fire-commercial*i
+3721,fire-related,fire-community
+3722,fire-related,fire-community*i
+3723,fire-related,fire-other bldg
+3724,fire-related,fire-other bldg*i
+3725,fire-related,fire-m/v
+3726,fire-related,fire-m/v-injury
+3727,fire-related,fire-mobile prop
+3728,fire-related,fire-mobile prop*i
+3729,fire-related,fire-all other
+3730,fire-related,fire-all other*i
+3750,fire-related,bomb svc oot
+3800,misc. crimes against person,misc c-a-pers
+3801,misc. crimes against person,cr abortion
+3802,misc. crimes against person,incit-injury
+3803,misc. crimes against person,kidnapping-1
+3804,misc. crimes against person,kidnapping-2
+3805,misc. crimes against person,un restraint 1
+3806,misc. crimes against person,un restraint 2
+3807,misc. crimes against person,neglgnt homicide
+3830,misc. crimes against person,transporting corpse
+3900,animal complaint,animal complnt
+3901,animal complaint,animal complnt
+3902,animal complaint,dog laws-misc
+3903,animal complaint,cruelty/animal
+3904,animal complaint,animal bite
+3907,animal complaint,removal dog litter
+3944,animal complaint,owner dangerous dog
+4000,suicide,suicides
+4010,suicide,hanging-suici
+4011,suicide,hanging-fatal
+4012,suicide,hanging-att
+4020,suicide,drugs-suicide
+4021,suicide,drugs-fatal
+4022,suicide,drugs-att
+4030,suicide,razor-suicide
+4031,suicide,razor-fatal
+4032,suicide,razor-att
+4040,suicide,gun-suicide
+4041,suicide,gun-fatal
+4042,suicide,gun-att-suic
+4050,suicide,suicide-other
+4051,suicide,suicide-fatal
+4052,suicide,suicide-att
+4100,sudden death,sudden death
+4200,care for sick,sick care for
+4300,mental case,emotionally disturbed
+4400,misc. wants,misc wants
+4401,misc. wants,wanted outside
+4402,misc. wants,a-w-o-l
+4403,misc. wants,lodger
+4404,misc. wants,re-arrest
+4405,misc. wants,take into custody order
+4500,missing case,missing case
+4600,juvenile-related,status offender
+4601,juvenile-related,runaway youth
+4602,juvenile-related,uncontrol youth
+4603,juvenile-related,immoral youth
+4604,juvenile-related,habitual truant
+4605,juvenile-related,truancy
+4606,juvenile-related,return to school - 16 or ov
+4700,connecting case,connecting case
+4800,airplane accident,airplane accidents
+4801,airplane accident,airplane-fatal
+4802,airplane accident,airplane-pers inj
+4803,airplane accident,airplane-prop dam
+4900,shooting,pd-shooting
+4901,shooting,fatal shooting
+4902,shooting,shooting-inj
+4903,shooting,shooting-miss
+5000,justifiable homicide,homicide/just
+5100,misc. management info.,misc mgt info
+5101,misc. management info.,gang related
+5102,misc. management info.,forcible entry by pd
+5103,misc. management info.,standing complaint
+5104,misc. management info.,comm tension;comm-service
+5105,misc. management info.,notification(s),directed pa
+5106,misc. management info.,mgmnt info 06
+5107,misc. management info.,mgmnt info 07
+5108,misc. management info.,mgmnt info 08
+5109,misc. management info.,mgmnt info 09
+5110,misc. management info.,mgmnt info 10
+5111,misc. management info.,mgmnt info 11
+5112,misc. management info.,mgmnt info 12
+5113,misc. management info.,mgmnt info 13
+5114,misc. management info.,mgmnt info 14
+5115,misc. management info.,mgmnt info 15
+5116,misc. management info.,mgmnt info 16
+5117,misc. management info.,mgmnt info 17
+5118,misc. management info.,mgmnt info 18
+5119,misc. management info.,mgmnt info 19
+5120,misc. management info.,private tows/reposession -
+5121,misc. management info.,sex offender registry vio
+5122,misc. management info.,metal theft
+5123,misc. management info.,distracted drivers
+5130,misc. management info.,drive by shooting
+5140,misc. management info.,ploygraph - admin
+5141,misc. management info.,ploygraph - criminal
+5150,misc. management info.,k-9 serv ot
+5210,shots fired,shots fired - confirmed
+5211,shots fired,shots fired - unconfirmed
+5212,shots fired,shots spotter
+5220,shots fired,comp-crime-ucr#2
+5300,landlord-tenant,landlord - tenant
+5500,report-related,duplicate case
+5510,report-related,no case info - unable to cl
+5520,report-related,case drawn in error
+5525,report-related,skeleton report
+5550,report-related,report returned - unaccepta
+9000,unknown,unknown
