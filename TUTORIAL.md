@@ -519,10 +519,9 @@ And now filter cases within 30 miles (48.28032 Kilometers) radio from our Hartfo
 import "experimental/geo"
 from(bucket: "PoliceCases")
     |> range(start: 2021-01-01T00:00:00.000Z, stop: 2021-12-31T00:00:00.000Z)
-    |> filter(fn: (r) => r._measurement == "policeincidents" and r._field == "case_number")
-    |> drop(columns: ["ucr_1_category","ucr_1_description","ucr_1_code","ucr_2_category","ucr_2_description","ucr_2_code"])
-    |> group()
+    |> filter(fn: (r) => r._measurement == "policeincidents" and r._field == "lat" or r.field == "lon")
     |> geo.filterRows(region: {lat: 41.763710, lon: -72.685097, radius: 48.28032}, strict: false)  
+    |> group()
 ```
 
 ![](number_of_cases_over_time_30_mile_radio.png)
