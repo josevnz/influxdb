@@ -106,6 +106,8 @@ def import_data(url: str, token: str, org: str, bucket: str, data_file: Path, tr
                     for row in csv_reader:
                         try:
                             case_number = str(row[0])
+                            if case_number == "Case_Number":
+                                continue
                             date_only = row[1]
                             time_24HR = f"{row[2]}:00.0"
                             if time_24HR == "2400:00.0":
