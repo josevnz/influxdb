@@ -8,6 +8,7 @@ A small project/ tutorial I put together while learning how to use Influxdb for 
 python -m venv ~/virtualenv/influxdbintro
 . ~/virtualenv/influxdbintro/bin/activate
 pip install --upgrade pip
+pip install --upgrade setuptools
 pip install --upgrade build
 pip install --upgrade wheel
 python setup.py develop
