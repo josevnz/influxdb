@@ -17,7 +17,7 @@ if __name__ == "__main__":
     PARSER = ArgumentParser("Convert CT school COVID19 data info an annotated CSV format for Influxdb")
     PARSER.add_argument('--destination', type=Path, default=DEFAULT_REPORT, help=f"Destination for massaged data. Default={DEFAULT_REPORT}")
     PARSER.add_argument('--explode', action='store_true',
-                        help=f"Destination for massaged data. Default={DEFAULT_REPORT}")
+                        help=f"Explode dates between ranges. You should not use this")
     PARSER.add_argument('--max_errors', default=MAX_ERRORS, help=f"Maximum number of import errors, default {MAX_ERRORS}")
     PARSER.add_argument('source', nargs='+')
     ARGS = PARSER.parse_args()
