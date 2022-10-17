@@ -10,7 +10,7 @@ In this tutorial I will show you how to use Influxdb; In particular I like it be
 
 # Running an Influxdb server from a container
 
-This is maybe the easiest way to get you started; We will use an external volume to persist the data across container reboots and upgrades (please check the container page to see [all the possible options](https://hub.podman.com/_/influxdb)):
+This is maybe the easiest way to get you started; We will use an external volume to persist the data across container reboots and upgrades (please check the container page to see [all the possible options](https://hub.docker.com/_/influxdb)):
 
 ```shell=
 podman pull Influxdb:latest
