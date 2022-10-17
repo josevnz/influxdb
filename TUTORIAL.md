@@ -13,9 +13,9 @@ In this tutorial I will show you how to use Influxdb; In particular I like it be
 This is maybe the easiest way to get you started; We will use an external volume to persist the data across container reboots and upgrades (please check the container page to see [all the possible options](https://hub.docker.com/_/influxdb)):
 
 ```shell=
-podman pull Influxdb:latest
-podman run --detach --volume /data/Influxdb:/var/lib/Influxdb2 --volumne /data:/data:rw  --name Influxdb_raspberrypi --restart always --publish 8086:8086 Influxdb:latest
-podman logs --follow Influxdb_raspberrypi
+podman pull influxdb:latest
+podman run --detach --volume /data/influxdb:/var/lib/influxdb --volumne /data:/data:rw  --name influxdb_raspberrypi --restart always --publish 8086:8086 influxdb:latest
+podman logs --follow influxdb_raspberrypi
 ```
 
 Also, we are mapping an additional volume called /data directory inside the container, to import some CSV files later.
