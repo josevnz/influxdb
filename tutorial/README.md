@@ -102,7 +102,7 @@ school,district,name,city,total,time,updated
 ...
 ```
 
-We do have also 2 files, so with a little help of a [Python script](scripts/massage_school_covid_data.py) we will massage the data:
+We do have also 2 files, so with a little help of a [Python script](../scripts/massage_school_covid_data.py) we will massage the data:
 
 ```python
 #!/usr/bin/env python3
@@ -387,15 +387,15 @@ ucr_code,primary_description,secondary_description
 
 We will put all these measurements on different buckets with an expiration of _never_ (normally your dataset points have an expiration date); for these 2 datasets we need to do some data manipulation, so instead of writing a massaging-only script we will write a couple if importers using [the Python SDK](https://github.com/influxdata/influxdb-client-python) for maximum flexibility. 
 
-First [import](scripts/socrata_codes_importer.py) the Socrata UCR codes using a script:
+First [import](../scripts/socrata_codes_importer.py) the Socrata UCR codes using a script:
 
 [![asciicast](https://asciinema.org/a/527215.svg)](https://asciinema.org/a/527215)
 
-And then import the police incidents using a different and slightly more complex script ([police_case_importer.py](scripts/police_cases_importer.py):
+And then import the police incidents using a different and slightly more complex script ([police_case_importer.py](../scripts/police_cases_importer.py):
 
 [![asciicast](https://asciinema.org/a/528791.svg)](https://asciinema.org/a/528791)
 
-The [police_cases_importer.py](scripts/police_cases_importer.py) also adds the ability to work with geolocation data inside Influxdb. The code fragment that handles the insertion of a data point using the [Python API write client](https://influxdb-client.readthedocs.io/en/stable/api.html#writeapi) is shown below:
+The [police_cases_importer.py](../scripts/police_cases_importer.py) also adds the ability to work with geolocation data inside Influxdb. The code fragment that handles the insertion of a data point using the [Python API write client](https://influxdb-client.readthedocs.io/en/stable/api.html#writeapi) is shown below:
 
 ```python
                             s2_cell_id_token = s2cell.lat_lon_to_token(lat, lon)
@@ -460,7 +460,7 @@ from(bucket: "PoliceCases")
 ```
 
 NOTE: It turns out this query takes a long time to run on my tiny Raspberry PI 4 server for anything longer than 4 years; 
-[there is a known issue on the UI](https://github.com/influxdata/influxdb/issues/17142) that terminates your session too soon, so I ended writing a [Python client instead](scripts/most_common_crime_types.py) for this query:
+[there is a known issue on the UI](https://github.com/influxdata/influxdb/issues/17142) that terminates your session too soon, so I ended writing a [Python client instead](../scripts/most_common_crime_types.py) for this query:
 
 ![](most_common_cases_last_3yrs.png)
 
@@ -555,7 +555,7 @@ with InfluxDBClient(url="http://raspberrypi:8086", token=token, org=org) as clie
             print(record)
 ```
 
-For example, running the ![cases_per_town.py](scripts/cases_per_town.py)
+For example, running the ![cases_per_town.py](../scripts/cases_per_town.py)
 
 ```python
 (InfluxDB) [josevnz@dmaf5 InfluxDBIntro]$ scripts/cases_per_town.py ct_data.cfg 
