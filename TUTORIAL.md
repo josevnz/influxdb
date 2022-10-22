@@ -1,10 +1,10 @@
-# Analyzing time series data with Python and Influxdb
+# Analyzing time series data with Python and Influxdb, using public domain datasets
 
 These days you get time series data from multiple sources; you may also argue than using a traditional relational database may not work well with this data because of the following:
 
 * Every datasource requires a custom schema; This means you need to spend more time deciding how to store your data, and if there are changes on the underlying data source then you may have to alter your table schemas
 * A traditional relational database doesn't expire the data; For most time series data you may only want to keep a certain window and then discard the rest automatically
-* New contenders in this are have optimized their storage format to make it fast for multiple clients to write data, and also to read the latest data; you may recall how relational databases worry much more about data duplicates, row lock contention.
+* New contenders in this are had optimized their storage format to make it fast for multiple clients to write data, and also to read the latest data; you may recall how relational databases worry much more about data duplicates, row lock contention.
 
 In this tutorial I will show you how to use Influxdb; In particular I like it because it offers integration with other tools out of the box (like [Grafana](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-influxdb/), [Python3](https://github.com/influxdata/influxdb-client-python)) and it has a powerful yet simple language to run queries called flux.
 
@@ -52,13 +52,13 @@ Let's take a closer look at the data that from these files:
 
 | District                | 	School ID | 	School name              | 	City     | 	School total | 	Report period           | 	Date updated |
 |-------------------------|------------|---------------------------|-----------|---------------|--------------------------|---------------|
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover  | 	0	           | 10/08/2020 - 10/14/2020  | 	06/23/2021   |
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover  | 	0	           | 10/15/2020 - 10/21/2020  | 	06/23/2021   |
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover  | 	0	           | 10/22/2020 - 10/28/2020  | 	06/23/2021   |
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover	 | 0	            | 10/29/2020 - 11/04/2020  | 	06/23/2021   |
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover  | 	0            | 	11/05/2020 - 11/11/2020 | 	06/23/2021   |
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover  | 	0            | 	11/12/2020 - 11/18/2020 | 	06/23/2021   |
-| Andover School District | 	1402	     | Andover Elementary School | 	Andover  | 	<6           | 	11/19/2020 - 11/25/2020 | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0	           | 10/08/2020 - 10/14/2020  | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0	           | 10/15/2020 - 10/21/2020  | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0	           | 10/22/2020 - 10/28/2020  | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX	 | 0	            | 10/29/2020 - 11/04/2020  | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0            | 	11/05/2020 - 11/11/2020 | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0            | 	11/12/2020 - 11/18/2020 | 	06/23/2021   |
+| XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	<6           | 	11/19/2020 - 11/25/2020 | 	06/23/2021   |
 
 [Normalizing](https://www.datascienceacademy.io/blog/what-is-data-normalization-why-it-is-so-necessary/) your data will be always an priority, let's see a few issues that show up on the very first lines:
 
@@ -82,7 +82,7 @@ How does the [CSV annotation](https://docs.influxdata.com/influxdb/v2.4/write-da
 
 ```text
 District,School ID,School name,City,School total,Report period,Date updated
-Andover School District,1402,Andover Elementary School,Andover,<6,10/08/2020 - 10/14/2020,06/23/2021
+XXXX School District,1402,XXXX YYYYYYYY School,XXXX,<6,10/08/2020 - 10/14/2020,06/23/2021
 ```
 
 Break it down by column:
@@ -95,10 +95,10 @@ Break it down by column:
 ```text
 # datatype measurement,ignored,tag,tag,long,time,ignored
 school,district,name,city,total,time,updated
-"school","Andover School District","Andover Elementary School","Andover",0,"2020-10-08T00:00:00Z","06/23/2021"
-"school","Andover School District","Andover Elementary School","Andover",0,"2020-10-15T00:00:00Z","06/23/2021"
-"school","Andover School District","Andover Elementary School","Andover",0,"2020-10-22T00:00:00Z","06/23/2021"
-"school","Andover School District","Andover Elementary School","Andover",0,"2020-10-29T00:00:00Z","06/23/2021"
+"school","XXXX School District","XXXX YYYYYYYY School","XXXX",0,"2020-10-08T00:00:00Z","06/23/2021"
+"school","XXXX School District","XXXX YYYYYYYY School","XXXX",0,"2020-10-15T00:00:00Z","06/23/2021"
+"school","XXXX School District","XXXX YYYYYYYY School","XXXX",0,"2020-10-22T00:00:00Z","06/23/2021"
+"school","XXXX School District","XXXX YYYYYYYY School","XXXX",0,"2020-10-29T00:00:00Z","06/23/2021"
 ...
 ```
 
@@ -224,10 +224,10 @@ And example run with podman looks like this on the machine where I have the data
 ```shell
 podman run --rm --tty --interactive --volume $HOME/Documents/InfluxDBIntro/data:/mnt:ro influxdb:latest influx write dryrun --org Kodegeek --format csv --bucket covid19 --file /mnt/COVID-19_Cases_in_CT_Schools_Annotated.csv
 odegeek
-school,city=Andover,name=Andover\ Elementary\ School total=0i 1602115200000000000
-school,city=Andover,name=Andover\ Elementary\ School total=0i 1602720000000000000
-school,city=Andover,name=Andover\ Elementary\ School total=0i 1603324800000000000
-school,city=Andover,name=Andover\ Elementary\ School total=0i 1603929600000000000
+school,city=XXXX,name=XXXX\ YYYYYYYY\ School total=0i 1602115200000000000
+school,city=XXXX,name=XXXX\ YYYYYYYY\ School total=0i 1602720000000000000
+school,city=XXXX,name=XXXX\ YYYYYYYY\ School total=0i 1603324800000000000
+school,city=XXXX,name=XXXX\ YYYYYYYY\ School total=0i 1603929600000000000
 ...     
 ```
 
@@ -369,10 +369,10 @@ And take a small peek on the data:
 
 ```text
 Case_Number,Date,Time_24HR,Address,UCR_1_Category,UCR_1_Description,UCR_1_Code,UCR_2_Category,UCR_2_Description,UCR_2_Code,Neighborhood,geom
-21013791,05/10/2021,1641,403 GARDEN ST,32* - PROPERTY DAMAGE ACCIDENT,PROP DAM ACC,3221,,,0,CLAY-ARSENAL,"(41.780238042803745, -72.68497435174203)"
-21014071,05/13/2021,0245,59 ELLINGTON ST,32* - PROPERTY DAMAGE ACCIDENT,PROP DAM ACC,3261,24* - MOTOR VEHICLE LAWS,EVADING RESP,2401,BEHIND THE ROCKS,"(41.74625648731947, -72.70484012171347)"
-20036741,11/29/2020,1703,267 ZION ST,31* - PERSONAL INJURY ACCIDENT,PERS INJ ACC,3124,23* - DRIVING LAWS,FOLL TOO CLOSE,2334,BEHIND THE ROCKS,"(41.74850755091766, -72.69411393999614)"
-21013679,05/09/2021,2245,HOMESTEAD AV & WOODLAND ST,31* - PERSONAL INJURY ACCIDENT,PERS INJ ACC,3124,23* - DRIVING LAWS,TRAVELING TOO FAST,2327,UPPER ALBANY,"(41.778689832211015, -72.69776621329845)"
+21013791,05/10/2021,1641,123 XXX ST,32* - PROPERTY DAMAGE ACCIDENT,PROP DAM ACC,3221,,,0,CLAY-ARSENAL,"(41.780238042803745, -72.68497435174203)"
+21014071,05/13/2021,0245,111 YYY ST,32* - PROPERTY DAMAGE ACCIDENT,PROP DAM ACC,3261,24* - MOTOR VEHICLE LAWS,EVADING RESP,2401,BEHIND THE ROCKS,"(41.74625648731947, -72.70484012171347)"
+20036741,11/29/2020,1703,23456 ZZZ ST,31* - PERSONAL INJURY ACCIDENT,PERS INJ ACC,3124,23* - DRIVING LAWS,FOLL TOO CLOSE,2334,BEHIND THE ROCKS,"(41.74850755091766, -72.69411393999614)"
+21013679,05/09/2021,2245,ZZZ AV & QQQQ ST,345* - PERSONAL INJURY ACCIDENT,PERS INJ ACC,3124,23* - DRIVING LAWS,TRAVELING TOO FAST,2327,UPPER ALBANY,"(41.778689832211015, -72.69776621329845)"
 ```
 
 Just at first sight we can see _it is not sorted_, date and dates/ times are in non-standard format, but otherwise it seems easy to normalize.
