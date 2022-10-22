@@ -4,7 +4,7 @@ A small project/ tutorial I put together while learning how to use Influxdb for 
 
 This tutorial includes 2 different public data sets to play with, not personal identifiable information on any of them.
 
-Please read the [](tutorial/README.md) file for details.
+Please read the [README](tutorial/README.md) file for details.
 
 # Developer mode
 
