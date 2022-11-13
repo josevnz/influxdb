@@ -1,12 +1,6 @@
 # Analyzing time series data with Python and Influxdb, using public domain datasets
 
-These days you get time series data from multiple sources; you may also argue than using a traditional relational database may not work well with this data because of the following:
-
-* Every datasource requires a custom schema; This means you need to spend more time deciding how to store your data, and if there are changes on the underlying data source then you may have to alter your table schemas
-* A traditional relational database doesn't expire the data; For most time series data you may only want to keep a certain window and then discard the rest automatically
-* New contenders in this are had optimized their storage format to make it fast for multiple clients to write data, and also to read the latest data; you may recall how relational databases worry much more about data duplicates, row lock contention.
-
-In this tutorial I will show you how to use Influxdb; In particular I like it because it offers integration with other tools out of the box (like [Grafana](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-influxdb/), [Python3](https://github.com/influxdata/influxdb-client-python)) and it has a powerful yet simple language to run queries called flux.
+This article is a [follow-up on my first article](https://github.com/josevnz/influxdb_intro/tree/main/tutorial) about Influxdb; There is some overlap as I assume not all readers are fully familiar with Influxdb, however I do want to show you more examples of what you can do with the tool.
 
 # Running an Influxdb server from a container
 
@@ -50,8 +44,8 @@ Then you can decide to write queries, what data to discard, what to store.
 
 Let's take a closer look at the data that from these files:
 
-| District                | 	School ID | 	School name              | 	City     | 	School total | 	Report period           | 	Date updated |
-|-------------------------|------------|---------------------------|-----------|---------------|--------------------------|---------------|
+| District             | 	School ID | 	School name         | 	City  | 	School total | 	Report period           | 	Date updated |
+|----------------------|------------|----------------------|--------|---------------|--------------------------|---------------|
 | XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0	           | 10/08/2020 - 10/14/2020  | 	06/23/2021   |
 | XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0	           | 10/15/2020 - 10/21/2020  | 	06/23/2021   |
 | XXXX School District | 	1402	     | XXXX YYYYYYYY School | 	XXXX  | 	0	           | 10/22/2020 - 10/28/2020  | 	06/23/2021   |
@@ -272,19 +266,6 @@ Please note than Influxdb supports also [Influxql](https://docs.influxdata.com/i
 
 #### More interesting queries
 
-##### Getting metadata from a bucket
-
-In my case I found than there is [an issue in Influxdb](https://community.influxdata.com/t/cannot-see-fields-tags-for-a-measurement-after-an-import-schema-methods-not-working/26797) that prevented me from getting data using queries like this:
-
-```python
-import "influxdata/influxdb/schema"
-schema.measurementTagKeys(bucket: "COVID19", measurement: "school")
-```
-
-The documentation says it should work by adding a 'start' parameter with the proper range, but my installation did not support it; This may be fixed by the time this article comes out, always check the documentation and your version of Influxdb.
-
-Anyway, lets move on with some queries
-
 ##### Number of COVID cases, by city
 
 Cities with the highest number of cases
@@ -359,13 +340,13 @@ What is inside [this dataset](https://data.hartford.gov/api/views/889t-nwfu/rows
 | Neighborhood      | Plain Text  | 11       |
 | geom              | Location    | 12       |
 
-Grab a copy:
+Grab a copy of the data for offline processing:
 
 ```shell
 curl --fail --location --output 'police-incidents-hartford-ct.csv' 'https://data.hartford.gov/api/views/889t-nwfu/rows.csv?accessType=DOWNLOAD&bom=true&format=true'
 ```
 
-And take a small peek on the data:
+What is inside?:
 
 ```text
 Case_Number,Date,Time_24HR,Address,UCR_1_Category,UCR_1_Description,UCR_1_Code,UCR_2_Category,UCR_2_Description,UCR_2_Code,Neighborhood,geom
@@ -498,7 +479,7 @@ sampleGeoData
     |> geo.filterRows(region: {lat: 30.04, lon: 31.23, radius: 200.0}, strict: true)
 ```
 
-So coming back to our police cases dataset,  can we find out the number of crimes for the year 2021, withing a radio of 30 miles on Hartford, CT?
+Coming back to our police cases dataset,  can we find out the number of crimes for the year 2021, withing a radio of 30 miles on Hartford, CT?
 
 First, a bit of geography:
 
@@ -555,10 +536,9 @@ with InfluxDBClient(url="http://raspberrypi:8086", token=token, org=org) as clie
             print(record)
 ```
 
-For example, running the ![cases_per_town.py](../scripts/cases_per_town.py)
+Am example run may look like this:
 
-```python
-(InfluxDB) [josevnz@dmaf5 InfluxDBIntro]$ scripts/cases_per_town.py ct_data.cfg 
+```shell 
 FluxRecord() table: 0, {'result': '_result', 'table': 0, 'city': 'Fairfield', '_value': 7269}
 FluxRecord() table: 1, {'result': '_result', 'table': 1, 'city': 'Hartford', '_value': 9134}
 FluxRecord() table: 2, {'result': '_result', 'table': 2, 'city': 'New Haven', '_value': 7159}
@@ -566,15 +546,15 @@ FluxRecord() table: 3, {'result': '_result', 'table': 3, 'city': 'Norwalk', '_va
 FluxRecord() table: 4, {'result': '_result', 'table': 4, 'city': 'Stamford', '_value': 8135}
 ```
 
-Yeah, that looks ugly. I'll show you the clean version instead :-)
+That looks rough, instead let me ![show you a more polished version](scripts/cases_per_town.py):
 
 [![asciicast](https://asciinema.org/a/526876.svg)](https://asciinema.org/a/526876)
 
-# What is next?
+# Wrapping up
+
+Of course there is much more you can do with this tool, here are some ideas:
 
 * The [Connecticut OpenData portal](https://data.ct.gov/) has lots more interesting data sets you can download for free and learn about the state; I bet you have similar portals with public data where you live.
-* The [Flux language](https://docs.influxdata.com/flux/v0.x/) is an interesting choice compared to plain SQL to analyze time series; I found it intuitive to use, but still learning a few kinks.
-* How fast is Influxdb compared other offerings? You need to decide for yourself. I haven't spent [much time tuning settings](https://www.influxdata.com/blog/optimizing-influxdb-performance-for-high-velocity-data/), instead my initial interest was how easy is to use and integration with other applications, like [Grafana](https://grafana.com).
 * If you write scripts in Python, you should definitely take a look at the [examples from the Git repository](https://github.com/influxdata/influxdb-client-python).
 
 

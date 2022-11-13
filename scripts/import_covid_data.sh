@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 :<<DOC
-This scripts expects to have a token defined as an environment variable, like this:
+This script expects to have a token defined as an environment variable, like this:
 export API_TOKEN="ddNjO0sMa4_r8TM60LJKRjUlzttaGCKSIADhTt9lhhHLgA4nnvNE26FgnasqhTDiczvnf5XL2nMJZNMuTgu3Vg=="
 DOC
 
