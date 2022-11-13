@@ -546,7 +546,7 @@ FluxRecord() table: 3, {'result': '_result', 'table': 3, 'city': 'Norwalk', '_va
 FluxRecord() table: 4, {'result': '_result', 'table': 4, 'city': 'Stamford', '_value': 8135}
 ```
 
-That looks rough, instead let me ![show you a more polished version](scripts/cases_per_town.py):
+That looks rough, instead let me [show you a more polished version](../scripts/cases_per_town.py):
 
 [![asciicast](https://asciinema.org/a/526876.svg)](https://asciinema.org/a/526876)
 
