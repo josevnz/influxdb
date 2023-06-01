@@ -1,5 +1,7 @@
 # Analyzing time series data with Python and Influxdb, using public domain datasets
 
+![](mazinger-z.png)
+
 This article is a [follow-up on my first article](https://github.com/josevnz/influxdb_intro/tree/main/tutorial) about Influxdb; There is some overlap as I assume not all readers are fully familiar with Influxdb, however I do want to show you more examples of what you can do with the tool.
 
 # Running an Influxdb server from a container
