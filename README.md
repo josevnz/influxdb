@@ -1,5 +1,7 @@
 # Influxdb Datasets
 
+![](mazinger-z.png)
+
 A small project/ tutorial I put together while learning how to use Influxdb for data processing.
 
 This tutorial includes 2 different public data sets to play with, not personal identifiable information on any of them.
